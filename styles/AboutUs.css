@@ -1,0 +1,141 @@
+@chars8et"utf-8";
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+	overflow:hidden;
+	background-color:#000000;
+}
+.nav a{
+	float: left;
+	display:block;
+	color:white;
+	text-align:center;
+	padding: 14px 16px;
+	text-decoration:none;
+	font-size:17px;
+}
+
+.nav a:hover{
+	background-color:#99ccff;
+	color: black;
+}
+
+.nav a.active{
+	background-color:#2196f3;
+	color: white;
+}
+.nav input[type=text]{
+	float:right;
+	padding:6px;
+	margin-top:8px;
+	font-size:17px;
+	border:none;
+}
+
+@media screen and (max-width: 600px) {
+
+.nav a, .nav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+.nav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+.box{
+	border-style:solid;
+	font-size:50px;
+	text-align:center;
+	
+}
+*{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+	margin-bottom:5px;
+	box-align:center;
+	
+}
+
+.container{
+	display:row-reverse;
+	justify-content:center;
+	
+	
+}
+.card{
+	background:#D3D3D3;
+	width:1500px;
+	height:280px;
+	margin:10px;
+	text-align:center;
+}
+
+#mission{
+	font-size:30px;
+	font-weight:bold;
+}
+
+
+.card-image{
+	background-color:black;
+	height:200px;
+	margin-bottom:15px;
+}
+.auction-1{
+	background-image:url('file:///C:/Users/Gimhani/Desktop/Auction%20Master/image/mission.jpg');
+}
+.box1{
+	border-style:solid;
+	font-size:40px;
+	text-align:center;
+}
+*{
+	box-sizing:border-box;
+	padding:0;
+	margin:0;
+	margin-bottom:5px;
+	box-align:center;
+}
+.container1{
+	display:flex;
+	justify-content:center;
+	
+}
+.card1{
+	background:#ffebff;
+	width:1050px;
+	height:300px;
+	margin:10px;
+	text-align:center;
+	
+}
+p{
+	font-size:20;
+}
+.card1-image{
+	background-color:black;
+	height:150px;
+	margin-bottom:15px;
+}
+.auction-2{
+	background-image:url('');
+}
+.auction-3{
+	background-image:url('');
+}
+.auction-4{
+	background-image:url('');
+}
+.auction-5{
+	background-image:url('');
+}
+.auction-6{
+	background-image:url('');
+}

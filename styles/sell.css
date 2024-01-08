@@ -1,0 +1,21 @@
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  
+  margin-left:690px;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+}

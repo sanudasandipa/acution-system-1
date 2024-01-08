@@ -1,0 +1,42 @@
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+  
+  margin-left:690px;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/*Form style*/
+form{
+	font-family: Courier New;
+	width:700px;
+	margin:auto;
+	padding:20px;
+	background:#fffff0;
+	font-size:18px;
+	color:brown;
+	
+	
+}
+
+
+
+  body {
+	  background-image:url("../image/registrationbackground.jpg");
+	  background-repeat: no-repeat;
+	  background-size:100%100%;
+  }

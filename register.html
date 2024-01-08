@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Auction Master registration</title>
+   <link rel="stylesheet" href="styles\register.css">
+   <link rel="stylesheet" href="styles\page1.css">
+</head>
+
+<body>
+ 
+
+  <image src="image\Main picture.jpg" width="100%">
+  <div class="nav">
+   <a href="page1.html">Home</a> 
+   <a href="Electronic.html">Electronics</a>
+   <a href="Art.html">Art</a>
+   <a href="Sell.html">Sell</a>
+   <a href="Sport.html">Sport</a>
+   <a href="My Account.html">My Account</a>
+   <a href="Ship To.html">Ship to</a>
+   <a href="Contact Us.html">Contact Us</a>
+   
+   <input type="text" placeholder="Search.." name="search">
+   <!-- </form> -->
+   </div>
+   
+   <div class="container">
+   
+   <script>
+   
+    function validateForm() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var phoneNumber = document.getElementById("phoneNumber").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      if (!/^\d+$/.test(phoneNumber)) {
+        alert("Phone number should contain only numbers.");
+        return false;
+      }
+
+      return true;
+    }
+	
+	
+  </script>
+
+
+<center>
+
+
+  <h1>Registration Form</h1><br>
+  <hr><br>
+  <form onsubmit="return validateForm()" action="php/Register.php" method="POST">
+    <label for="username"><b>Username:&emsp;&emsp;&emsp;&emsp;&emsp;</b></label>
+    <input type="text" id="username" name="username" required ><br><br>
+
+    <label for="email"><b>Email:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b></label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password"><b>Password:&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b></label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="confirmPassword"><b>Confirm Password:&nbsp;</b></label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+    <label for="fullName"><b>Full Name:&emsp;&emsp;&emsp;&emsp;&emsp;</b></label>
+    <input type="text" id="fullName" name="fullName" required><br><br>
+	
+	<label for="address"><b>Address:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b></label>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <label for="city"><b>City:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b></label>
+    <input type="text" id="city" name="city" required><br><br>
+
+    <label for="country"><b>Country:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b></label>
+    <input type="text" id="country" name="country" required><br><br>
+
+    <label for="zipCode"><b>Zip Code:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</b></label>
+    <input type="text" id="zipCode" name="zipCode" required><br><br>
+
+    <label for="phoneNumber"><b>Phone Number:&emsp;&emsp;&emsp;</b></label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+	
+	
+	<br><br>
+	<input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()"> I Agree to Terms & Conditions<br>
+    <input type="checkbox" class="inputStyle" id="checkbox" onclick="enableButton()"> Receive transaction for bid, sales and invoices
+    
+	
+	<button type="submit" class="registerbtn">Register</button>
+  </form><br><br>
+
+  
+  <hr>
+   
+   
+   </center>
+   
+   
+   </div>
+
+</body>
+</html>

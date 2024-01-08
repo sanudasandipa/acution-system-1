@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Auction Master</title>
+   <link rel="stylesheet" href="styles\page1.css"> 
+   <link rel="stylesheet" href="styles\Ship To.css">
+   
+</head>
+
+<body class="bgimage">
+
+  <img src="image\Main picture.jpg" width="100%" alt="bg image">
+  <div class="nav">
+   <a href="page1.html">Home</a> 
+   <a href="Electronic.html">Electronics</a>
+   <a href="Art.html">Art</a>
+   <a href="Sell.html">Sell</a>
+   <a href="Sport.html">Sport</a>
+   <a href="My Account.html">My Account</a>
+   <a href="Ship To.html">Ship to</a>
+   <a href="Contact Us.html">Contact Us</a>
+   <!-- <form action="/action_page.php"> -->
+   <input type="text" placeholder="Search.." name="search">
+   <!-- </form> -->
+   </div>
+   
+  <div class="ship-form">
+  <form action="php/ship.php" method="POST">
+  <h2 class="htitle">Shipping Details<h2>
+     <label for="shippingAddress" class="subtitle">Shipping Address: </label>
+	 <input type="text" class="address" name="shippingAddress" placeholder="Enter your shipping address" required>
+	 <br>
+	 <br>
+	 <label for="zipCode" class="subtitle">Zip Code: </label>
+	 <input type="number" class="card-2" name="zipCode" placeholder="Enter Zip Code" required>
+	 <br>
+	 <br>
+	 <label for="shippingMethod" class="subtitle">Shipping method: </label>
+	 
+	 <select name="shippingMethod">
+	    <option value="select shipping method">select shipping method </option>
+		<option value="Standardshipping">Standard shipping</option>
+		<option value="Expeditedshipping">Expedited shipping</option>
+		<option value="Internationalshipping">International shipping</option>
+	</select>
+	<br>
+	
+	<br>
+	<br>
+	   <button type="submit" class="sub-bttn">Submit</button>
+	   
+  </form>
+  </div>      
+	<br>
+    <br>
+   
+   <div class="payment-form">
+   <form action="php/paymentdetail.php" method="POST"  id="paymentForm" >
+   
+    <h2 class="hptitle">Payment Method Details</h2>
+	    <label for="Paymentmethod" class="cname">Payment method: </label>
+		
+		<select name="Paymentmethod">
+		      <option value="select method">select payment method</option>
+			  <option value="Credit/Debit card">Credit/Debit card</option>
+			  <option value="Cash on Delivery">Cash on Delivery</option>
+		</select>
+        		
+		<br>
+		<br>
+		<br>
+		<label for="Card accepted" class="cname">Card accepted:</label>
+		<br>
+		<img src="image/card_img.png" alt="">
+        <br>
+		<br>
+		<label for="cardName" name="cardName" class="cname">Card name:</label>
+		<input type="text" class="card" placeholder="Enter Card name" required>
+		<br>
+		<br>
+		<label for="Cardnumber" class="cname">Card number:</label>
+		<input type="number" class="card-1" name="Cardnumber" id="cardNumber" placeholder="1111-2222-3333-4444" required>
+		<br>
+		<br>
+		<label for="CVV" class="cname">CVV:</label>
+		<input type="number" class="card-2" placeholder="123" required>
+		<br>
+		<br>
+		<label for="expiry" class="cname">Expiry:</label>
+		<input type="month" class="card-3" name="expiry" placeholder="MM/YY" required>
+		<br>
+		<br>
+		<button type="submit" class="pay-bttn">Submit</button>
+	
+	</form>   
+	</div>
+	<br>
+	<br>
+	 <button type="submit" class="delivery">Deliver Details</button>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+<center>
+   <div class="pagination">
+     <a href="#">&laquo;</a>
+     <a href="#page1.html" class="active">1</a>
+     <a href="#" >2</a>
+     <a href="#">3</a>
+     <a href="#">4</a>
+     <a href="#">5</a>
+     <a href="#">6</a>
+	 <a href="#">7</a>
+     <a href="#">8</a>
+     <a href="#">9</a>
+     <a href="#">10</a>
+     <a href="#">11</a>
+     <a href="#">12</a>
+     <a href="#">&raquo;</a>
+   </div>
+</center>
+
+
+<script>
+
+function validateCardNumber() {
+	 
+    var cardNumber = document.getElementById("cardNumber").value;
+    
+    
+    cardNumber = cardNumber.replace(/ /g, "").replace(/-/g, "");
+    
+    
+    if (cardNumber.length !== 16) {
+      alert("Invalid card number. Please enter a valid 16-digit card number.");
+      return false;
+    }
+    
+    
+    if (!/^\d+$/.test(cardNumber)) {
+      alert("Invalid card number. Please enter only numeric digits.");
+      return false;
+    }
+    
+    return true;
+  }
+  
+  
+ var form = document.getElementById("paymentForm");
+  form.addEventListener("submit", function(event) {
+    if (!validateCardNumber()) {
+      event.preventDefault();
+    }
+  });
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
